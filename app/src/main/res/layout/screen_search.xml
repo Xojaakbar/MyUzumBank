@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:orientation="horizontal"
+        android:background="#F5F6F8">
+           <ImageView
+               android:id="@+id/btn_back_to_home"
+               android:layout_width="@dimen/_40sdp"
+               android:layout_height="@dimen/_40sdp"
+               android:src="@drawable/arrow_left"
+               android:padding="@dimen/_12sdp"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/_12sdp"
+            android:layout_gravity="center"
+            android:background="@drawable/background_search"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/search_icon"
+                android:layout_gravity="center"
+                android:padding="@dimen/_5sdp"
+                app:tint="#989898" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_weight="1"
+                    android:background="#00FFFFFF"/>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

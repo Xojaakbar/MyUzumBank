@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Uzum Bank</string>
+    <string name="veditenomer">Введите ваш номер</string>
+    <string name="nomertelefona">Номер телефона</string>
+    <string name="_998">+998</string>
+    <string name="prodoljit">Продолжить</string>
+    <string name="password">Password</string>
+    <string name="domoy">Домой</string>
+    <string name="perevod">Перевод</string>
+    <string name="oplata">Оплата</string>
+    <string name="chat">Чат</string>
+    <string name="menu">Меню</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search">Поиск</string>
+    <string name="uzum_pay">Uzum Pay</string>
+    <string name="kzachisleniyu">К зачислению:   </string>
+    <string name="nachatperepisku">Начать переписку</string>
+    <string name="chat_screen_text">Здравствуйте, прошу \nпрощения за беспокойство, \nхотелось бы узнать ваше \nмнение о приложении Apelsin.\nЧто вам нравится, а что бы \nхотели улучшить? \n\nВы уже  знаете, что мы \nзапустили Удаленную \nидентификацию, которая \nоткрывает ещё больше \nвозможностей приложения?\nПройти её очень просто,\nперейдите в раздел \n"Профиль" и выберите Bank \nApelsin.\n- Пройля идентификацию, \nдля вас будет понижена \nкомиссия до 0,4%\n-Вы сможете добавить до 15\nкарт в приложение\n-Вам будут величены лимиты на переводы\n-Ну, и от нас будет \nнебольшой подарок в виде \n250 бонусных апельсинок для \nобмена на интернет-пакет\n(Ucell/Uzmobile/Mobiuz)\n\nЕсли вдруг возникнут \nкакие-нибудь сложности,\nобращайтесь,мы с \nудовольствием вам поможем.</string>
+    <string name="transfer">Перевод</string>
+</resources>

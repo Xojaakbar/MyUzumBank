@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingHorizontal="@dimen/_15sdp"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_continue">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingVertical="@dimen/_5sdp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="@string/veditenomer"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/nomertelefona"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:background="@drawable/background_input"
+                android:padding="@dimen/_5sdp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_4sdp"
+                    android:src="@drawable/uzb_flag"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/_998"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:layout_weight="4"/>
+
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#BDB3B3"
+                    android:layout_marginHorizontal="@dimen/_5sdp"/>
+
+                <EditText
+                    android:id="@+id/phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:paddingHorizontal="@dimen/_5sdp"
+                    android:background="@color/white"
+                    android:maxLength="9"
+                    android:inputType="numberSigned"
+                    android:hint="(00) 000-00-00"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="Пароль"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:background="@drawable/background_input"
+                android:padding="@dimen/_5sdp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="match_parent"
+                    android:paddingHorizontal="@dimen/_4sdp"
+                    android:src="@drawable/uzum_password"/>
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:lines="1"
+                    android:inputType="textPassword"
+                    android:background="@color/white"
+                    android:hint="@string/password"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="Подтвердите пароль"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:background="@drawable/background_input"
+                android:padding="@dimen/_5sdp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="match_parent"
+                    android:paddingHorizontal="@dimen/_4sdp"
+                    android:src="@drawable/uzum_password"/>
+
+                <EditText
+                    android:id="@+id/confirm_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:lines="1"
+                    android:inputType="textPassword"
+                    android:background="@color/white"
+                    android:hint="Confirm your password"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="Имя"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:background="@drawable/background_input"
+                android:padding="@dimen/_5sdp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="match_parent"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:src="@drawable/firstlastnamesuzum"/>
+
+                <EditText
+                    android:id="@+id/first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:lines="1"
+                    android:background="@color/white"
+                    android:hint="First name"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="Фамилия"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:background="@drawable/background_input"
+                android:padding="@dimen/_5sdp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="match_parent"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:src="@drawable/firstlastnamesuzum"/>
+
+                <EditText
+                    android:id="@+id/last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:lines="1"
+                    android:background="@color/white"
+                    android:hint="Last name"/>
+
+            </LinearLayout>
+
+           <!-- <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="Дата рождения"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:background="@drawable/background_input"
+                android:padding="@dimen/_5sdp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="match_parent"
+                    android:paddingHorizontal="@dimen/_7sdp"
+                    android:src="@drawable/born_date"
+                    android:contentDescription="TODO" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:clickable="false"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:lines="1"
+                    android:background="@color/white"
+                    android:hint="30/06/97"/>
+
+            </LinearLayout>-->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:indeterminateTint="#5099EC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="@dimen/_45sdp"
+        style="@style/Widget.AppCompat.ProgressBar"/>
+    <ProgressBar
+        android:id="@+id/progressbar2"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_55sdp"
+        android:indeterminateTint="#5099EC"
+        android:rotation="180"
+        app:layout_constraintBottom_toBottomOf="@id/progressbar"
+        app:layout_constraintLeft_toLeftOf="@id/progressbar"
+        app:layout_constraintRight_toRightOf="@id/progressbar"
+        app:layout_constraintTop_toTopOf="@id/progressbar"
+        style="@style/Widget.AppCompat.ProgressBar"/>
+    <ProgressBar
+        android:id="@+id/progressbar3"
+        android:layout_width="@dimen/_10sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:indeterminateTint="#126BE6"
+        android:rotation="180"
+        app:layout_constraintBottom_toBottomOf="@id/progressbar"
+        app:layout_constraintLeft_toLeftOf="@id/progressbar"
+        app:layout_constraintRight_toRightOf="@id/progressbar"
+        app:layout_constraintTop_toTopOf="@id/progressbar"
+        style="@style/Widget.AppCompat.ProgressBar" />
+    <ProgressBar
+        android:id="@+id/progressbar4"
+        android:layout_width="@dimen/_5sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:indeterminateTint="#2A006AFF"
+        app:layout_constraintBottom_toBottomOf="@id/progressbar"
+        app:layout_constraintLeft_toLeftOf="@id/progressbar"
+        app:layout_constraintRight_toRightOf="@id/progressbar"
+        app:layout_constraintTop_toTopOf="@id/progressbar"
+        style="@style/Widget.AppCompat.ProgressBar" />
+
+    <TextView
+        android:id="@+id/btn_continue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:text="@string/prodoljit"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@drawable/background_btn"
+        android:backgroundTint="#8868F1"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/btn_signIn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/btn_signIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Войти"
+        android:textSize="17sp"
+        android:textColor="@color/black"
+        android:layout_margin="@dimen/_10sdp"
+        android:padding="@dimen/_5sdp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

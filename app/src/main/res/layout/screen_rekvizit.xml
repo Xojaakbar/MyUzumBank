@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/back_icon"
+            android:paddingHorizontal="@dimen/_10sdp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Меню"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:paddingLeft="@dimen/_15sdp"/>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        app:layout_constraintTop_toBottomOf="@id/line1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:elevation="@dimen/_1sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardElevation="@dimen/_1sdp"
+        app:cardMaxElevation="@dimen/_1sdp">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:scaleType="centerCrop"
+                android:padding="@dimen/_18sdp"
+                android:src="@drawable/list_paper_icon2"
+                app:tint="@color/uzum_theme" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Оплата по реквизитам"
+                android:paddingLeft="@dimen/_15sdp"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:textSize="17sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/right_arrow"
+                app:tint="#6915D5"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/add_to_favourite"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        app:layout_constraintTop_toBottomOf="@id/pay"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:elevation="@dimen/_1sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardElevation="@dimen/_1sdp"
+        app:cardMaxElevation="@dimen/_1sdp">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:scaleType="centerCrop"
+                android:padding="@dimen/_18sdp"
+                android:src="@drawable/star"
+                app:tint="@color/uzum_theme" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Добавить в избранное"
+                android:paddingLeft="@dimen/_15sdp"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:textSize="17sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/right_arrow"
+                app:tint="#6915D5"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDEEF0"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:src="@drawable/arrow_left"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="@dimen/_12sdp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/btn_back"
+        app:layout_constraintTop_toTopOf="@id/btn_back"
+        app:layout_constraintBottom_toBottomOf="@id/btn_back"
+        android:textSize="17sp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:text="Профиль"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_back">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/profile_picture"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_45sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:src="@drawable/profile_icon_vector" />
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_picture"
+                android:text="Без имени"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/_10sdp"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/not_identified"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                app:layout_constraintTop_toBottomOf="@id/txt_name"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:background="@drawable/background_profile_info">
+                
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/info_icon2"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_12sdp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Вы не идентифицированы"
+                    android:gravity="center|left"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0/2"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/background_profile_txt"
+                    android:paddingVertical="@dimen/_2sdp"
+                    android:paddingHorizontal="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"/>
+
+                
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/doc"
+                android:layout_width="@dimen/_135sdp"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                app:cardElevation="0dp"
+                android:layout_marginStart="@dimen/_12sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/not_identified"
+                app:cardCornerRadius="@dimen/_15sdp">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="left">
+
+                    <ImageView
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/background_menu_item"
+                        android:src="@drawable/baseline_insert_drive_file_24"
+                        app:tint="#FFFFFF"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:padding="@dimen/_9sdp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Документы и карты лояльности"
+                        android:gravity="center|left"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:textSize="14sp"/>
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/person"
+                android:layout_width="@dimen/_135sdp"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                app:cardElevation="0dp"
+                app:layout_constraintRight_toRightOf="@id/not_identified"
+                app:layout_constraintTop_toBottomOf="@id/not_identified"
+                app:cardCornerRadius="@dimen/_15sdp">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="left">
+
+                    <ImageView
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/background_menu_item"
+                        android:src="@drawable/person_icon"
+                        app:tint="#FFFFFF"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:padding="@dimen/_9sdp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Персональные данные"
+                        android:gravity="center|left"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:textSize="14sp"/>
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/doc"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:listitem="@layout/item_menu"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:paddingVertical="@dimen/_10sdp"
+                android:background="@drawable/background_menu_linear"
+                android:layout_marginTop="@dimen/_15sdp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

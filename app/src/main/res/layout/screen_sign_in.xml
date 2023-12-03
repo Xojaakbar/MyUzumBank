@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/_12sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_15sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintRight_toLeftOf="@+id/txt_connect_with_bank"
+        android:src="@drawable/baseline_record_voice_over_24"
+        app:tint="@color/uzum_theme" />
+
+    <TextView
+        android:id="@+id/txt_connect_with_bank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  Связь с банком"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:textColor="@color/uzum_theme"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/txt_enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/_10sdp"
+        android:text="@string/veditenomer"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:layout_marginTop="@dimen/_35sdp"
+        app:layout_constraintTop_toBottomOf="@id/txt_connect_with_bank"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/txt_your_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:text="@string/nomertelefona"
+        android:textSize="17sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_enter"/>
+
+    <LinearLayout
+        android:id="@+id/line_login"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:background="@drawable/background_input"
+        android:padding="@dimen/_5sdp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/txt_your_number"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <ImageView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/uzb_flag"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/_998"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_weight="4"/>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#BDB3B3"
+            android:layout_marginHorizontal="@dimen/_5sdp"/>
+
+        <EditText
+            android:id="@+id/edit_number"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@color/white"
+            android:hint="(00) 000-00-00"
+            android:inputType="numberSigned"
+            android:maxLength="9"
+            android:paddingHorizontal="@dimen/_5sdp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:text="Пароль"
+        app:layout_constraintTop_toBottomOf="@id/line_login"
+        android:textSize="17sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:background="@drawable/background_input"
+        android:orientation="horizontal"
+        android:padding="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_7sdp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_password"
+        tools:layout_editor_absoluteX="16dp">
+
+        <ImageView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="@dimen/_4sdp"
+            android:src="@drawable/uzum_password" />
+
+        <EditText
+            android:id="@+id/edit_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@color/white"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingRight="@dimen/_10sdp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btn_continue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:text="@string/prodoljit"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/background_btn"
+        android:backgroundTint="#8868F1"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/btn_signUp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/btn_signUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Зарегистрироваться"
+        android:textSize="17sp"
+        android:textColor="@color/black"
+        android:layout_margin="@dimen/_10sdp"
+        android:padding="@dimen/_5sdp"/>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:indeterminateTint="#5099EC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="@dimen/_45sdp"
+        style="@style/Widget.AppCompat.ProgressBar"/>
+    <ProgressBar
+        android:id="@+id/progressbar2"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_55sdp"
+        android:indeterminateTint="#5099EC"
+        android:rotation="180"
+        app:layout_constraintBottom_toBottomOf="@id/progressbar"
+        app:layout_constraintLeft_toLeftOf="@id/progressbar"
+        app:layout_constraintRight_toRightOf="@id/progressbar"
+        app:layout_constraintTop_toTopOf="@id/progressbar"
+        style="@style/Widget.AppCompat.ProgressBar"/>
+    <ProgressBar
+        android:id="@+id/progressbar3"
+        android:layout_width="@dimen/_10sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:indeterminateTint="#126BE6"
+        android:rotation="180"
+        app:layout_constraintBottom_toBottomOf="@id/progressbar"
+        app:layout_constraintLeft_toLeftOf="@id/progressbar"
+        app:layout_constraintRight_toRightOf="@id/progressbar"
+        app:layout_constraintTop_toTopOf="@id/progressbar"
+        style="@style/Widget.AppCompat.ProgressBar" />
+    <ProgressBar
+        android:id="@+id/progressbar4"
+        android:layout_width="@dimen/_5sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:indeterminateTint="#2A006AFF"
+        app:layout_constraintBottom_toBottomOf="@id/progressbar"
+        app:layout_constraintLeft_toLeftOf="@id/progressbar"
+        app:layout_constraintRight_toRightOf="@id/progressbar"
+        app:layout_constraintTop_toTopOf="@id/progressbar"
+        style="@style/Widget.AppCompat.ProgressBar" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

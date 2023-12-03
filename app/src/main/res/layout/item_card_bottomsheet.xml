@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_90sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center|start"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/_15sdp">
+
+    <TextView
+        android:id="@+id/txt_type_of_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UzCard"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:textSize="16sp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_weight="1"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@drawable/background_card_item"
+        android:layout_marginHorizontal="@dimen/_10sdp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_img"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            app:cardCornerRadius="@dimen/_6sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:elevation="0dp"
+            app:cardElevation="0dp"
+            app:cardMaxElevation="0dp">
+            <ImageView
+                android:id="@+id/img_of_card"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:paddingHorizontal="@dimen/_5sdp"
+                android:src="@drawable/humos"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txt_card_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:textColor="@color/black"
+            android:text="UZCARD - 8600 33** **** 2032"
+            app:layout_constraintTop_toTopOf="@id/card_view_img"
+            app:layout_constraintLeft_toRightOf="@id/card_view_img"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginStart="@dimen/_15sdp"/>
+
+        <TextView
+            android:id="@+id/summa_of_card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="17 291,71 UZS"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/card_view_img"
+            app:layout_constraintLeft_toRightOf="@id/card_view_img"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_card_number"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:paddingStart="@dimen/_15sdp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

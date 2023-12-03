@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:padding="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:src="@drawable/arrow_left"/>
+
+    <TextView
+        android:id="@+id/txt_enter_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btn_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:textSize="26sp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:text="Подтверждение"/>
+
+    <TextView
+        android:id="@+id/txt_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txt_enter_code"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:text="Код из смс"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/edt_code"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:background="@drawable/background_edit_text_verify"
+        app:layout_constraintTop_toBottomOf="@id/txt_code"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:paddingStart="@dimen/_15sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:lines="1"
+        android:textSize="20sp"
+        android:maxLength="6"
+        android:inputType="number"
+        android:hint="6 цифр"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidline"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintGuide_percent="0.45"
+        android:orientation="horizontal"/>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:indeterminateTint="#8733F1"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="@dimen/_45sdp"
+        style="@style/Widget.AppCompat.ProgressBar"/>
+
+    <ProgressBar
+        android:id="@+id/progressbar2"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_55sdp"
+        android:indeterminateTint="#842BF4"
+        android:rotation="180"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/progressbar"
+        app:layout_constraintLeft_toLeftOf="@id/progressbar"
+        app:layout_constraintRight_toRightOf="@id/progressbar"
+        app:layout_constraintTop_toTopOf="@id/progressbar"
+        style="@style/Widget.AppCompat.ProgressBar"/>
+
+    <ProgressBar
+        android:id="@+id/progressbar3"
+        android:layout_width="@dimen/_10sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:indeterminateTint="#842CF3"
+        android:rotation="180"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/progressbar"
+        app:layout_constraintLeft_toLeftOf="@id/progressbar"
+        app:layout_constraintRight_toRightOf="@id/progressbar"
+        app:layout_constraintTop_toTopOf="@id/progressbar"
+        style="@style/Widget.AppCompat.ProgressBar" />
+
+    <ProgressBar
+        android:id="@+id/progressbar4"
+        android:layout_width="@dimen/_5sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:indeterminateTint="#2A006AFF"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/progressbar"
+        app:layout_constraintLeft_toLeftOf="@id/progressbar"
+        app:layout_constraintRight_toRightOf="@id/progressbar"
+        app:layout_constraintTop_toTopOf="@id/progressbar"
+        style="@style/Widget.AppCompat.ProgressBar" />
+
+    <TextView
+        android:id="@+id/count_down_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Отправить повторно 00:47"
+        android:textSize="18sp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_40sdp"
+        app:layout_constraintTop_toBottomOf="@id/edt_code"
+        app:layout_constraintLeft_toLeftOf="@id/edt_code"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

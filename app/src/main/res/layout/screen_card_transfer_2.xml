@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.screens.main.transfer.cardtransfer.checktransfer.CardTransferScreen2">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/back_icon"
+            android:paddingHorizontal="@dimen/_10sdp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Перевод"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:paddingLeft="@dimen/_15sdp"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <ImageView
+            android:id="@+id/image_card"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:src="@drawable/kapitalbank_card"
+            app:layout_constraintTop_toBottomOf="@id/line1"
+            android:layout_marginTop="@dimen/_5sdp"/>
+
+        <LinearLayout
+            android:id="@+id/card_info"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_120sdp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@id/image_card"
+            app:layout_constraintLeft_toLeftOf="@id/image_card"
+            app:layout_constraintRight_toRightOf="@id/image_card"
+            app:layout_constraintTop_toTopOf="@id/image_card"
+            android:layout_marginHorizontal="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/background_card_uzcard">
+
+        <ImageView
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:src="@drawable/humos"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"/>
+            <com.cottacush.android.currencyedittext.CurrencyEditText
+                android:id="@+id/summa_of_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 000 000 000"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:clickable="false"
+                android:enabled="false"
+                android:focusable="false"
+                android:textStyle="bold"
+                android:inputType="numberSigned"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:paddingStart="@dimen/_15sdp"/>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/card_number_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="8600 33** **** 2032"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:paddingStart="@dimen/_15sdp"
+                    android:paddingTop="@dimen/_5sdp"/>
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="06/28"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <TextView
+                android:id="@+id/card_name_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rabdullayeva Aqida"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"/>
+        </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_poluchatel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Получатель"
+        app:layout_constraintTop_toBottomOf="@id/image_card"
+        android:layout_marginStart="@dimen/_20sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="18sp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/card_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="9860 00** **** 9888"
+        app:layout_constraintTop_toBottomOf="@id/txt_poluchatel"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_20sdp"/>
+
+    <TextView
+        android:id="@+id/card_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rabdullayeva Aqida"
+        android:textSize="16sp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintTop_toBottomOf="@id/card_number"/>
+
+    <TextView
+        android:id="@+id/line_midl"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#26000000"
+        app:layout_constraintTop_toBottomOf="@id/card_name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:text=""
+        android:layout_marginTop="@dimen/_15sdp"/>
+
+    <TextView
+        android:id="@+id/summa_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Сумма"
+        app:layout_constraintTop_toBottomOf="@id/line_midl"
+        android:layout_marginStart="@dimen/_20sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="18sp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textStyle="bold"/>
+
+    <com.cottacush.android.currencyedittext.CurrencyEditText
+        android:id="@+id/summa_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 000 000"
+        app:layout_constraintTop_toBottomOf="@id/summa_txt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:clickable="false"
+        android:enabled="false"
+        android:background="#00FFFFFF"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_20sdp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" UZS"
+        app:layout_constraintTop_toBottomOf="@id/summa_txt"
+        app:layout_constraintLeft_toRightOf="@id/summa_number"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:clickable="false"
+        android:enabled="false"
+        android:background="#00FFFFFF"
+        android:layout_marginTop="@dimen/_5sdp"/>
+
+
+    <TextView
+        android:id="@+id/komissiya"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Komissiya: 600 UZS"
+        android:textSize="16sp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/summa_number"/>
+
+    <EditText
+        android:id="@+id/comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Комментарий"
+        android:paddingHorizontal="@dimen/_15sdp"
+        android:paddingVertical="@dimen/_8sdp"
+        android:lines="4"
+        android:background="@drawable/background_edit_text_comment"
+        app:layout_constraintTop_toBottomOf="@id/komissiya"
+        android:layout_marginHorizontal="@dimen/_25sdp"
+        app:layout_constraintBottom_toTopOf="@id/btn_continue"/>
+
+    <TextView
+        android:id="@+id/btn_continue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:text="@string/transfer"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/background_btn"
+        android:backgroundTint="#8868F1"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

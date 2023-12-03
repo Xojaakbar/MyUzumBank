@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/screenSignUp"
+        android:name="luis.mvi.uzumbank.presentation.screens.signup.SignUpScreen"
+        android:label="ScreenSignUp"
+        tools:layout="@layout/screen_signup">
+        <action
+            android:id="@+id/action_screenSignUp_to_signInScreen"
+            app:destination="@id/signInScreen"
+            app:popUpTo="@id/screenSignUp"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_screenSignUp_to_signUpVerifyScreen"
+            app:destination="@id/signUpVerifyScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/cardTransferScreen"
+        android:name="luis.mvi.uzumbank.presentation.screens.main.transfer.cardtransfer.CardTransferScreen"
+        android:label="CardTransferScreen"
+        tools:layout="@layout/screen_card_transfer">
+        <action
+            android:id="@+id/action_cardTransferScreen_to_cardTransferScreen2"
+            app:destination="@id/cardTransferScreen2" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatScreen"
+        android:name="luis.mvi.uzumbank.presentation.screens.main.chat.ChatScreen"
+        android:label="ChatScreen"
+        tools:layout="@layout/screen_chat"/>
+    <fragment
+        android:id="@+id/transferScreen"
+        android:name="luis.mvi.uzumbank.presentation.screens.main.transfer.TransferScreen"
+        android:label="screen_transfer"
+        tools:layout="@layout/screen_transfer" >
+        <action
+            android:id="@+id/action_transferScreen_to_cardTransferScreen"
+            app:destination="@id/cardTransferScreen" />
+        <action
+            android:id="@+id/action_transferScreen_to_transferNaSchetScreen"
+            app:destination="@id/transferNaSchetScreen" />
+        <action
+            android:id="@+id/action_transferScreen_to_rekvizitTransfer"
+            app:destination="@id/rekvizitTransfer" />
+    </fragment>
+    <fragment
+        android:id="@+id/rekvizitTransfer"
+        android:name="luis.mvi.uzumbank.presentation.screens.main.transfer.rekvizit.RekvizitTransfer"
+        android:label="RekvizitTransfer"
+        tools:layout="@layout/screen_rekvizit"/>
+    <fragment
+        android:id="@+id/transferNaSchetScreen"
+        android:name="luis.mvi.uzumbank.presentation.screens.main.transfer.naschet.TransferNaSchetScreen"
+        android:label="TransferNaSchetScreen"
+        tools:layout="@layout/screen_schet_transfer"/>
+    <fragment
+        android:id="@+id/signInScreen"
+        android:name="luis.mvi.uzumbank.presentation.screens.signin.SignInScreen"
+        android:label="SignInScreen"
+        tools:layout="@layout/screen_sign_in">
+        <action
+            android:id="@+id/action_signInScreen_to_screenSignUp"
+            app:destination="@id/screenSignUp"
+            app:popUpTo="@id/signInScreen"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_signInScreen_to_homeScreen"
+            app:destination="@id/homeScreen"
+            app:popUpTo="@id/signInScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeScreen"
+        android:name="luis.mvi.uzumbank.presentation.screens.main.home.HomeScreen"
+        android:label="screen_home"
+        tools:layout="@layout/screen_home">
+        <action
+            android:id="@+id/action_homeScreen_to_profileScreen"
+            app:destination="@id/profileScreen" />
+        <action
+            android:id="@+id/action_homeScreen_to_searchScreen"
+            app:destination="@id/searchScreen" />
+        <action
+            android:id="@+id/action_homeScreen_to_searchScreen2"
+            app:destination="@id/searchScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuScreen"
+        android:name="luis.mvi.uzumbank.presentation.screens.main.menu.MenuScreen"
+        android:label="screen_menu"
+        tools:layout="@layout/screen_menu" />
+    <fragment
+        android:id="@+id/paymentScreen"
+        android:name="luis.mvi.uzumbank.presentation.screens.main.payment.PaymentScreen"
+        android:label="screen_payment"
+        tools:layout="@layout/screen_payment" />
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="luis.mvi.uzumbank.presentation.screens.splash.SplashScreen"
+        android:label="SplashScreen"
+        tools:layout="@layout/screen_splash">
+        <action
+            android:id="@+id/action_splashScreen_to_passcodeScreen2"
+            app:destination="@id/passcodeScreen2"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/passcodeScreen2"
+        android:name="luis.mvi.uzumbank.presentation.screens.passcodescreen.PasscodeScreen"
+        android:label="PasscodeScreen"
+        tools:layout="@layout/screen_passcode">
+        <action
+            android:id="@+id/action_passcodeScreen2_to_signInScreen"
+            app:destination="@id/signInScreen"
+            app:popUpTo="@id/passcodeScreen2"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_passcodeScreen2_to_homeScreen"
+            app:destination="@id/homeScreen"
+            app:popUpTo="@id/passcodeScreen2"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_passcodeScreen2_to_screenSignUp"
+            app:destination="@id/screenSignUp"
+            app:popUpTo="@id/passcodeScreen2"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileScreen"
+        android:name="luis.mvi.uzumbank.presentation.screens.main.home.profile.ProfileScreen"
+        android:label="ProfileScreen"
+        tools:layout="@layout/screen_profile"/>
+    <fragment
+        android:id="@+id/signUpVerifyScreen"
+        android:name="luis.mvi.uzumbank.presentation.screens.verifysignup.SignUpVerifyScreen"
+        android:label="SignUpVerifyScreen"
+        tools:layout="@layout/screen_verify">
+        <action
+            android:id="@+id/action_signUpVerifyScreen_to_homeScreen"
+            app:destination="@id/homeScreen"
+            app:popUpTo="@id/screenSignUp"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchScreen"
+        android:name="luis.mvi.uzumbank.presentation.screens.main.home.search.SearchScreen"
+        android:label="SearchScreen"
+        tools:layout="@layout/screen_search"/>
+    <fragment
+        android:id="@+id/cardTransferScreen2"
+        android:name="luis.mvi.uzumbank.presentation.screens.main.transfer.cardtransfer.checktransfer.CardTransferScreen2"
+        android:label="screen_card_transfer_2"
+        tools:layout="@layout/screen_card_transfer_2" >
+        <action
+            android:id="@+id/action_cardTransferScreen2_to_transferVerifyScreen"
+            app:destination="@id/transferVerifyScreen" />
+        <argument
+            android:name="currentTransferData"
+            app:argType="luis.mvi.uzumbank.domain.models.CurrentTransferData" />
+    </fragment>
+    <fragment
+        android:id="@+id/transferVerifyScreen"
+        android:name="luis.mvi.uzumbank.presentation.screens.main.transfer.cardtransfer.checktransfer.verifytransfer.TransferVerifyScreen"
+        android:label="TransferVerifyScreen"
+        tools:layout="@layout/screen_transfer_verify">
+        <action
+            android:id="@+id/action_transferVerifyScreen_to_successTransferScreen"
+            app:destination="@id/successTransferScreen"
+            app:popUpTo="@id/homeScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/successTransferScreen"
+        android:name="luis.mvi.uzumbank.presentation.screens.main.transfer.cardtransfer.checktransfer.verifytransfer.successtransfer.SuccessTransferScreen"
+        android:label="SuccessTransferScreen"
+        tools:layout="@layout/screen_success_transfer">
+        <action
+            android:id="@+id/action_successTransferScreen_to_homeScreen"
+            app:destination="@id/homeScreen"
+            app:popUpTo="@id/successTransferScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+</navigation>

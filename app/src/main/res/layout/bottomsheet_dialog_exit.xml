@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_bottomsheet_dialog_exit"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/txt_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="Выход"
+        android:textStyle="bold"
+        android:textSize="26sp"
+        android:textColor="#CC000000"/>
+    
+    <TextView
+        android:id="@+id/txt_exit2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txt_exit"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:textSize="15sp"
+        android:textColor="#80000000"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Вы действительно хотите выйти из своей \nучетной записи?"/>
+        
+    <TextView
+        android:id="@+id/btn_exit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:text="Подтвердить"
+        android:gravity="center"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/txt_exit2"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:textColor="@color/white"
+        android:background="@drawable/background_exit_btn"/>
+
+    <TextView
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:text="Отмена"
+        android:textSize="16sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/btn_exit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:background="@drawable/background_btn_cancel"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

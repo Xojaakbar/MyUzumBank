@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/homeScreen"
+        android:title="@string/domoy"
+        android:icon="@drawable/uzum_logo"
+        android:actionLayout="@layout/screen_home"/>
+
+    <item android:id="@+id/transferScreen"
+        android:title="@string/perevod"
+        android:icon="@drawable/transfer_icon"
+        android:actionLayout="@layout/screen_transfer"/>
+
+    <item android:id="@+id/paymentScreen"
+        android:title="@string/oplata"
+        android:icon="@drawable/payment_list_icon"
+        android:actionLayout="@layout/screen_payment"/>
+
+    <item android:id="@+id/chatScreen"
+        android:title="@string/chat"
+        android:icon="@drawable/chat_icon"
+        android:actionLayout="@layout/screen_chat"/>
+
+    <item android:id="@+id/menuScreen"
+        android:title="@string/menu"
+        android:icon="@drawable/menu_icon"
+        android:actionLayout="@layout/screen_menu"/>
+
+</menu>

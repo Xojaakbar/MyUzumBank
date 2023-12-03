@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background_bottomsheet"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="5dp"
+        android:background="@drawable/background_bottomsheet_custom_line"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_gravity="top|center"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_card"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_marginBottom="@dimen/_5sdp"
+        tools:itemCount="2"
+        tools:listitem="@layout/item_card_bottomsheet"
+        android:paddingBottom="@dimen/_5sdp"/>
+
+</LinearLayout>

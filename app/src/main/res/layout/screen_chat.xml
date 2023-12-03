@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#EDEEF0"
+    android:orientation="vertical">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/_44sdp"
+      android:background="@color/white"
+      android:orientation="horizontal">
+
+      <ImageView
+          android:layout_width="@dimen/_30sdp"
+          android:layout_height="@dimen/_30sdp"
+          android:layout_marginEnd="@dimen/_15sdp"
+          android:layout_marginStart="@dimen/_8sdp"
+          android:layout_gravity="center"
+          android:src="@drawable/headphone_icon"/>
+
+      <androidx.appcompat.widget.LinearLayoutCompat
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:orientation="vertical">
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:text="Служба поддержки"
+              android:textColor="#CC000000"
+              android:gravity="bottom"
+              android:textSize="17sp"/>
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:text="Онлайн 24/7"
+              android:textColor="#4CAF50"
+              android:layout_marginTop="@dimen/_2sdp"
+              android:gravity="top"
+              android:textSize="13sp"/>
+
+      </androidx.appcompat.widget.LinearLayoutCompat>
+
+      <ImageView
+          android:layout_width="@dimen/_25sdp"
+          android:layout_height="@dimen/_30sdp"
+          android:layout_gravity="center"
+          android:layout_marginEnd="@dimen/_6sdp"
+          android:src="@drawable/three_dots_icon"
+          app:tint="#000000" />
+
+  </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/headphone_icon"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_7sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="17sp"
+            android:padding="10dp"
+            android:textColor="#CC000000"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:text="@string/chat_screen_text"
+            android:background="@drawable/background_chat_text"
+            android:layout_marginBottom="@dimen/_10sdp"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_42sdp"
+        android:text="@string/nachatperepisku"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:background="@drawable/background_dalee"
+        android:layout_marginVertical="@dimen/_7sdp"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
